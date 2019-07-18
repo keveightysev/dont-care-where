@@ -6,7 +6,7 @@ import { Context } from '../../context';
 const Weather = ({ navigate }) => {
   const { state, dispatch } = useContext(Context);
 
-  const { date, preferences } = state;
+  const { preferences } = state;
 
   useEffect(() => {}, []);
 

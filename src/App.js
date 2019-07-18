@@ -1,11 +1,16 @@
 import React from 'react';
-import Preferences from './components/Preferences';
+
+import Header from './components/Header';
+import Main from './components/Main';
+
+import { Global } from './styles/Global';
 
 function App() {
   return (
     <>
-      <h1>Don't Care Where</h1>
-      <Preferences />
+      <Global />
+      <Header />
+      <Main />
     </>
   );
 }
