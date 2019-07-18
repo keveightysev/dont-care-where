@@ -44,7 +44,7 @@ const HeaderStyle = styled.header`
       transition: .5s ease
 
       span {
-        display :inline-block;
+        display: inline-block;
         font-family: ${lato};
         color: ${black}
         font-weight: 600;

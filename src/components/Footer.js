@@ -14,4 +14,6 @@ const FooterStyle = styled.footer`
     width: 100%
     background: ${black};
     flex-shrink: 0;
+    color: ${white},
+    font-family: ${lato}
 `;

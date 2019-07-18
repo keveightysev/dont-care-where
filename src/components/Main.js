@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Preferences from './Preferences';
+import Landing from './Landing';
 
 import { white, black, lato } from '../styles/constants';
 
@@ -9,7 +9,11 @@ const Main = () => {
   return (
     <MainStyle>
       <div>
-        <Preferences />
+        <Box>
+          <div>
+            <Landing />
+          </div>
+        </Box>
       </div>
     </MainStyle>
   );
@@ -17,14 +21,12 @@ const Main = () => {
 
 export default Main;
 
-const MainStyle = styled.main`
+const Box = styled.div`
   position: relative;
-  width: 100%;
   max-width: 700px;
   margin: 75px auto 90px;
   background: ${white};
   min-height: 400px;
-  flex: 1 0 auto;
 
   &::before {
     content: '';
@@ -53,11 +55,18 @@ const MainStyle = styled.main`
   }
 
   > div {
-    position: absolute;
+    position: relative;
     font-color: ${black};
     font-family: ${lato};
+    font-size: 1.6rem;
     z-index: 5;
     width: 100%;
-    height: 100%;
+    height: auto;
+    top: -45px;
   }
+`;
+
+const MainStyle = styled.main`
+  width: 100%;
+  flex: 1 0 auto;
 `;

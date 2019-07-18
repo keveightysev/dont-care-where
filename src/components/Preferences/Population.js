@@ -30,7 +30,7 @@ const Population = () => {
         <Button
           type='button'
           id='smallTown'
-          data-min='1000'
+          data-min='10000'
           data-max='50000'
           onClick={handleClick}
           pop={pop}
