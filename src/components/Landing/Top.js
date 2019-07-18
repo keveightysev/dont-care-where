@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 import airportPic from '../../assets/adult-airport-arrival-1008155.jpg';
-import { blue, white } from '../../styles/constants';
+import { blue, white, black } from '../../styles/constants';
 
 const Top = () => {
   return (
     <TopStyle>
       <div>
-        <div />
+        <div className='gradient' />
         <img src={airportPic} alt='Woman in airport with luggage' />
-        <div>
+        <div className='content'>
           <h2>Looking to get away but not sure where to go?</h2>
           <h2>We can help!</h2>
           <button>
@@ -24,7 +24,7 @@ const Top = () => {
 
 export default Top;
 
-const TopStyle = styled.div`
+const TopStyle = styled.section`
   position: relative;
   width: 100%;
   border-bottom-right-radius: 30px;
@@ -32,11 +32,11 @@ const TopStyle = styled.div`
   border-top-left-radius: 30px;
   transform: skewY(-3deg);
   overflow: hidden;
-  height: 250px;
+  height: 280px;
   background: ${blue};
   z-index: 1;
 
-  div:first-child {
+  .gradient {
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -53,14 +53,14 @@ const TopStyle = styled.div`
       );
   }
 
-  div:last-child {
+  .content {
     width: 100%;
     height: 115%;
     position: absolute;
     z-index: 5;
-    top: -18px;
+    top: 50%;
     padding: 30px;
-    transform: skewY(3deg);
+    transform: skewY(3deg) translateY(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +71,9 @@ const TopStyle = styled.div`
       font-size: 2.5rem;
       width: 50%;
       text-align: center;
+      margin: 0;
+      font-weight: 300;
+      text-shadow: 0 0 5px ${black};
     }
 
     button {
@@ -82,19 +85,9 @@ const TopStyle = styled.div`
       cursor: pointer;
       border-radius: 10px;
       transition: 0.5s ease;
-
-      span {
-        display: inline-block;
-        transition: 0.5s ease;
-      }
-
       &:hover {
-        transform: skewY(-5deg);
         background: transparent;
         border-color: ${white};
-        span {
-          transform: skewY(5deg);
-        }
       }
     }
   }

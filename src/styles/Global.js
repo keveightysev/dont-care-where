@@ -1,10 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-import { caveatBrush } from './constants';
+import { caveatBrush, black, white } from './constants';
 
 export const Global = createGlobalStyle`
     html {
         font-size: 62.5%;
         height: 100%;
+        overflow: hidden;
     }
 
     body {
@@ -43,13 +44,20 @@ export const Global = createGlobalStyle`
       }
 
       h1 {
-          font-family: ${caveatBrush}
-          color: #f1faee
+          font-family: ${caveatBrush};
+          color: ${white};
           font-size: 4rem;
           font-style: italic;
           line-height: 3.5rem;
           text-align: right;
           user-select: none;
           display: inline-block;
+      }
+
+      h2{
+          color: ${black};
+          font-size: 2.5rem;
+          font-weight: 700;
+          margin-bottom: 10px;
       }
 `;
