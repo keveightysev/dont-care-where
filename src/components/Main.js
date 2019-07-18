@@ -21,9 +21,10 @@ const MainStyle = styled.main`
   position: relative;
   width: 100%;
   max-width: 700px;
-  margin: 75px auto;
+  margin: 75px auto 90px;
   background: ${white};
   min-height: 400px;
+  flex: 1 0 auto;
 
   &::before {
     content: '';

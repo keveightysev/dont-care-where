@@ -29,6 +29,8 @@ export const Global = createGlobalStyle`
             transparent
             );
         overflow: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .sr {
